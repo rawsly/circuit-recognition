@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circuit Detector</title>
+</head>
+<body>
+    
+    <script src="https://unpkg.com/@tensorflow/tfjs"></script>
+    <script src="https://unpkg.com/@tensorflow/tfjs-automl"></script>
+    <img id="circuit" crossorigin="anonymous" src="circuit.png">
+    <script>
+        async function run() {
+            const model = await tf.automl.loadImageClassification('model.json');
+            const image = document.getElementById('circuit');
+            const predictions = await model.classify(image);
+            console.log(predictions);
+            // Show the resulting object on the page.
+            const pre = document.createElement('pre');
+            pre.textContent = JSON.stringify(predictions, null, 2);
+            document.body.append(pre);
+        }
+        run();
+    </script>
+
+</body>
+</html>
