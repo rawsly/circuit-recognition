@@ -6,7 +6,8 @@ Projeyi çalıştırmak için:
  - https://nodejs.org/en/ adresine girip Node.js kurulmalı.
  - NodeJS'in yüklendiğinden emin olmak için Windows ise CMD'yi, MacOS veya Linux'ta terminale şu komutlar yazılmalı:
   `node --version`
- `npm --version`
+  
+  `npm --version`
   Bu komutlar ayrı ayrı yazıldıktan sonra node ve npm versiyonlarını yazdıracaktır.
   - CMD'yi (Terminali) yönetici moduyla (CMD'ye sağ tıklayınca yönetici modu ile açılması için buton var.) açıp şu komut yazılmalı:
   `npm install -g http-server`
